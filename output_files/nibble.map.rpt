@@ -1,5 +1,5 @@
 Analysis & Synthesis report for nibble
-Wed Nov 16 10:59:24 2016
+Wed Nov 16 11:29:58 2016
 Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
 
 
@@ -10,7 +10,13 @@ Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Post-Synthesis Netlist Statistics for Top Partition
+ 10. Elapsed Time Per Partition
+ 11. Analysis & Synthesis Messages
 
 
 
@@ -34,22 +40,27 @@ agreement for further details.
 
 
 
-+---------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                              ;
-+-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Wed Nov 16 10:59:24 2016           ;
-; Quartus Prime Version       ; 16.0.0 Build 211 04/27/2016 SJ Lite Edition ;
-; Revision Name               ; nibble                                      ;
-; Top-level Entity Name       ; decoder                                     ;
-; Family                      ; Cyclone V                                   ;
-; Logic utilization (in ALMs) ; N/A until Partition Merge                   ;
-; Total registers             ; N/A until Partition Merge                   ;
-; Total pins                  ; N/A until Partition Merge                   ;
-; Total virtual pins          ; N/A until Partition Merge                   ;
-; Total block memory bits     ; N/A until Partition Merge                   ;
-; Total PLLs                  ; N/A until Partition Merge                   ;
-; Total DLLs                  ; N/A until Partition Merge                   ;
-+-----------------------------+---------------------------------------------+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Wed Nov 16 11:29:58 2016       ;
+; Quartus Prime Version           ; 16.0.0 Build 211 04/27/2016 SJ Lite Edition ;
+; Revision Name                   ; nibble                                      ;
+; Top-level Entity Name           ; decoder                                     ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 0                                           ;
+; Total pins                      ; 47                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -151,13 +162,95 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                 ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                             ; Library ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------+---------+
+; decoder.sv                       ; yes             ; User SystemVerilog HDL File  ; /home/andressa/Microeletronica/Nibble-VERILOG/decoder.sv ;         ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------+---------+
+
+
++--------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary            ;
++---------------------------------------------+----------+
+; Resource                                    ; Usage    ;
++---------------------------------------------+----------+
+; Estimate of Logic utilization (ALMs needed) ; 0        ;
+;                                             ;          ;
+; Combinational ALUT usage for logic          ; 0        ;
+;     -- 7 input functions                    ; 0        ;
+;     -- 6 input functions                    ; 0        ;
+;     -- 5 input functions                    ; 0        ;
+;     -- 4 input functions                    ; 0        ;
+;     -- <=3 input functions                  ; 0        ;
+;                                             ;          ;
+; Dedicated logic registers                   ; 0        ;
+;                                             ;          ;
+; I/O pins                                    ; 47       ;
+;                                             ;          ;
+; Total DSP Blocks                            ; 0        ;
+;                                             ;          ;
+; Maximum fan-out node                        ; inst[20] ;
+; Maximum fan-out                             ; 1        ;
+; Total fan-out                               ; 70       ;
+; Average fan-out                             ; 0.74     ;
++---------------------------------------------+----------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                     ;
++----------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
++----------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+; |decoder                   ; 0 (0)             ; 0 (0)        ; 0                 ; 0          ; 47   ; 0            ; |decoder            ; decoder     ; work         ;
++----------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-------------------+---------------------------------+
+; Type              ; Count                           ;
++-------------------+---------------------------------+
+; boundary_port     ; 47                              ;
+;                   ;                                 ;
+; Max LUT depth     ; 0.00                            ;
+; Average LUT depth ; 0.00                            ;
++-------------------+---------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
-    Info: Processing started: Wed Nov 16 10:59:05 2016
+    Info: Processing started: Wed Nov 16 11:29:39 2016
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off nibble -c nibble
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file mux2.v
@@ -168,21 +261,21 @@ Info (12021): Found 1 design units, including 1 entities, in source file single_
     Info (12023): Found entity 1: single_port_rom File: /home/andressa/Microeletronica/Nibble-VERILOG/single_pot_rom.v Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file fullAdder8.v
     Info (12023): Found entity 1: fullAdder8 File: /home/andressa/Microeletronica/Nibble-VERILOG/fullAdder8.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file decoder.v
-    Info (12023): Found entity 1: decoder File: /home/andressa/Microeletronica/Nibble-VERILOG/decoder.v Line: 1
-Error (10773): Verilog HDL error at decoder.v(1): declaring module ports or function arguments with unpacked array types requires SystemVerilog extensions File: /home/andressa/Microeletronica/Nibble-VERILOG/decoder.v Line: 1
-Error (10048): Verilog HDL error at decoder.v(3): values cannot be assigned directly to all or part of array "addr" - assignments must be made to individual elements only File: /home/andressa/Microeletronica/Nibble-VERILOG/decoder.v Line: 3
-Error (10133): Verilog HDL Expression error at decoder.v(3): illegal part select of unpacked array "inst" File: /home/andressa/Microeletronica/Nibble-VERILOG/decoder.v Line: 3
-Error (10048): Verilog HDL error at decoder.v(4): values cannot be assigned directly to all or part of array "y" - assignments must be made to individual elements only File: /home/andressa/Microeletronica/Nibble-VERILOG/decoder.v Line: 4
-Error (10133): Verilog HDL Expression error at decoder.v(4): illegal part select of unpacked array "inst" File: /home/andressa/Microeletronica/Nibble-VERILOG/decoder.v Line: 4
-Error (10048): Verilog HDL error at decoder.v(5): values cannot be assigned directly to all or part of array "op" - assignments must be made to individual elements only File: /home/andressa/Microeletronica/Nibble-VERILOG/decoder.v Line: 5
-Error (10133): Verilog HDL Expression error at decoder.v(5): illegal part select of unpacked array "inst" File: /home/andressa/Microeletronica/Nibble-VERILOG/decoder.v Line: 5
-Error (10048): Verilog HDL error at decoder.v(6): values cannot be assigned directly to all or part of array "x" - assignments must be made to individual elements only File: /home/andressa/Microeletronica/Nibble-VERILOG/decoder.v Line: 6
-Error (10133): Verilog HDL Expression error at decoder.v(6): illegal part select of unpacked array "inst" File: /home/andressa/Microeletronica/Nibble-VERILOG/decoder.v Line: 6
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 9 errors, 1 warning
-    Error: Peak virtual memory: 1226 megabytes
-    Error: Processing ended: Wed Nov 16 10:59:24 2016
-    Error: Elapsed time: 00:00:19
-    Error: Total CPU time (on all processors): 00:00:42
+Info (12021): Found 1 design units, including 1 entities, in source file decoder.sv
+    Info (12023): Found entity 1: decoder File: /home/andressa/Microeletronica/Nibble-VERILOG/decoder.sv Line: 1
+Info (12127): Elaborating entity "decoder" for the top level hierarchy
+Warning (10230): Verilog HDL assignment warning at decoder.sv(3): truncated value with size 5 to match size of target (4) File: /home/andressa/Microeletronica/Nibble-VERILOG/decoder.sv Line: 3
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "inst[20]" File: /home/andressa/Microeletronica/Nibble-VERILOG/decoder.sv Line: 1
+Info (21057): Implemented 47 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 24 input pins
+    Info (21059): Implemented 23 output pins
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 1282 megabytes
+    Info: Processing ended: Wed Nov 16 11:29:58 2016
+    Info: Elapsed time: 00:00:19
+    Info: Total CPU time (on all processors): 00:00:41
 
 
