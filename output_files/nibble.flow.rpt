@@ -1,5 +1,5 @@
 Flow report for nibble
-Wed Nov 16 11:33:41 2016
+Wed Nov 16 14:50:12 2016
 Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
 
 
@@ -41,16 +41,16 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Wed Nov 16 11:33:41 2016       ;
+; Flow Status                     ; Successful - Wed Nov 16 14:50:12 2016       ;
 ; Quartus Prime Version           ; 16.0.0 Build 211 04/27/2016 SJ Lite Edition ;
 ; Revision Name                   ; nibble                                      ;
-; Top-level Entity Name           ; decoder                                     ;
+; Top-level Entity Name           ; sum1                                        ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CGXFC7C7F23C8                              ;
 ; Timing Models                   ; Final                                       ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
 ; Total registers                 ; 0                                           ;
-; Total pins                      ; 47                                          ;
+; Total pins                      ; 11                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -68,7 +68,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/16/2016 11:29:40 ;
+; Start date & time ; 11/16/2016 14:47:12 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; nibble              ;
 +-------------------+---------------------+
@@ -79,17 +79,17 @@ agreement for further details.
 +-------------------------------------+---------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                     ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+---------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 0.147930657905768         ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 0.147931843203836         ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl               ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog) ; <None>        ; --          ; --             ;
 ; EDA_TIME_SCALE                      ; 1 ps                      ; --            ; --          ; eda_simulation ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                        ; --            ; --          ; --             ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                         ; --            ; --          ; --             ;
-; PARTITION_COLOR                     ; 16764057                  ; --            ; decoder     ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING     ; --            ; decoder     ; Top            ;
-; PARTITION_NETLIST_TYPE              ; SOURCE                    ; --            ; decoder     ; Top            ;
+; PARTITION_COLOR                     ; 16764057                  ; --            ; sum1        ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING     ; --            ; sum1        ; Top            ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                    ; --            ; sum1        ; Top            ;
 ; PROJECT_OUTPUT_DIRECTORY            ; output_files              ; --            ; --          ; --             ;
-; TOP_LEVEL_ENTITY                    ; decoder                   ; nibble        ; --          ; --             ;
+; TOP_LEVEL_ENTITY                    ; sum1                      ; nibble        ; --          ; --             ;
 +-------------------------------------+---------------------------+---------------+-------------+----------------+
 
 
@@ -98,10 +98,12 @@ agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:18     ; 1.0                     ; 1237 MB             ; 00:00:41                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 1382 MB             ; 00:00:01                           ;
+; Analysis & Synthesis ; 00:00:19     ; 1.0                     ; 1237 MB             ; 00:00:44                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 1379 MB             ; 00:00:01                           ;
 ; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 1384 MB             ; 00:00:01                           ;
-; Total                ; 00:00:20     ; --                      ; --                  ; 00:00:43                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 1379 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 1383 MB             ; 00:00:01                           ;
+; Total                ; 00:00:21     ; --                      ; --                  ; 00:00:48                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -113,6 +115,8 @@ agreement for further details.
 ; Analysis & Synthesis ; andressa-Lenovo  ; Ubuntu 16.04.1 ; 16         ; x86_64         ;
 ; EDA Netlist Writer   ; andressa-Lenovo  ; Ubuntu 16.04.1 ; 16         ; x86_64         ;
 ; EDA Netlist Writer   ; andressa-Lenovo  ; Ubuntu 16.04.1 ; 16         ; x86_64         ;
+; EDA Netlist Writer   ; andressa-Lenovo  ; Ubuntu 16.04.1 ; 16         ; x86_64         ;
+; EDA Netlist Writer   ; andressa-Lenovo  ; Ubuntu 16.04.1 ; 16         ; x86_64         ;
 +----------------------+------------------+----------------+------------+----------------+
 
 
@@ -120,6 +124,8 @@ agreement for further details.
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off nibble -c nibble
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off nibble -c nibble --vector_source=/home/andressa/Microeletronica/Nibble-VERILOG/Waveform.vwf --testbench_file=/home/andressa/Microeletronica/Nibble-VERILOG/simulation/qsim/Waveform.vwf.vt
+quartus_eda --write_settings_files=off --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=/home/andressa/Microeletronica/Nibble-VERILOG/simulation/qsim/ nibble -c nibble
 quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off nibble -c nibble --vector_source=/home/andressa/Microeletronica/Nibble-VERILOG/Waveform.vwf --testbench_file=/home/andressa/Microeletronica/Nibble-VERILOG/simulation/qsim/Waveform.vwf.vt
 quartus_eda --write_settings_files=off --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=/home/andressa/Microeletronica/Nibble-VERILOG/simulation/qsim/ nibble -c nibble
 

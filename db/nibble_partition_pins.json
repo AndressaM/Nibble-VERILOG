@@ -4,187 +4,47 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "addr[0]",
+					"name" : "ovf",
 					"strict" : false
 				},
 				{
-					"name" : "addr[1]",
+					"name" : "s[0]",
 					"strict" : false
 				},
 				{
-					"name" : "addr[2]",
+					"name" : "s[1]",
 					"strict" : false
 				},
 				{
-					"name" : "addr[3]",
+					"name" : "s[2]",
 					"strict" : false
 				},
 				{
-					"name" : "y[0]",
+					"name" : "s[3]",
 					"strict" : false
 				},
 				{
-					"name" : "y[1]",
+					"name" : "s[4]",
 					"strict" : false
 				},
 				{
-					"name" : "y[2]",
+					"name" : "a[4]",
 					"strict" : false
 				},
 				{
-					"name" : "y[3]",
+					"name" : "a[3]",
 					"strict" : false
 				},
 				{
-					"name" : "y[4]",
+					"name" : "a[2]",
 					"strict" : false
 				},
 				{
-					"name" : "y[5]",
+					"name" : "a[0]",
 					"strict" : false
 				},
 				{
-					"name" : "y[6]",
-					"strict" : false
-				},
-				{
-					"name" : "y[7]",
-					"strict" : false
-				},
-				{
-					"name" : "x[0]",
-					"strict" : false
-				},
-				{
-					"name" : "x[1]",
-					"strict" : false
-				},
-				{
-					"name" : "x[2]",
-					"strict" : false
-				},
-				{
-					"name" : "x[3]",
-					"strict" : false
-				},
-				{
-					"name" : "x[4]",
-					"strict" : false
-				},
-				{
-					"name" : "x[5]",
-					"strict" : false
-				},
-				{
-					"name" : "x[6]",
-					"strict" : false
-				},
-				{
-					"name" : "x[7]",
-					"strict" : false
-				},
-				{
-					"name" : "op[0]",
-					"strict" : false
-				},
-				{
-					"name" : "op[1]",
-					"strict" : false
-				},
-				{
-					"name" : "op[2]",
-					"strict" : false
-				},
-				{
-					"name" : "inst[16]",
-					"strict" : false
-				},
-				{
-					"name" : "inst[17]",
-					"strict" : false
-				},
-				{
-					"name" : "inst[18]",
-					"strict" : false
-				},
-				{
-					"name" : "inst[19]",
-					"strict" : false
-				},
-				{
-					"name" : "inst[0]",
-					"strict" : false
-				},
-				{
-					"name" : "inst[1]",
-					"strict" : false
-				},
-				{
-					"name" : "inst[2]",
-					"strict" : false
-				},
-				{
-					"name" : "inst[3]",
-					"strict" : false
-				},
-				{
-					"name" : "inst[4]",
-					"strict" : false
-				},
-				{
-					"name" : "inst[5]",
-					"strict" : false
-				},
-				{
-					"name" : "inst[6]",
-					"strict" : false
-				},
-				{
-					"name" : "inst[7]",
-					"strict" : false
-				},
-				{
-					"name" : "inst[8]",
-					"strict" : false
-				},
-				{
-					"name" : "inst[9]",
-					"strict" : false
-				},
-				{
-					"name" : "inst[10]",
-					"strict" : false
-				},
-				{
-					"name" : "inst[11]",
-					"strict" : false
-				},
-				{
-					"name" : "inst[12]",
-					"strict" : false
-				},
-				{
-					"name" : "inst[13]",
-					"strict" : false
-				},
-				{
-					"name" : "inst[14]",
-					"strict" : false
-				},
-				{
-					"name" : "inst[15]",
-					"strict" : false
-				},
-				{
-					"name" : "inst[21]",
-					"strict" : false
-				},
-				{
-					"name" : "inst[22]",
-					"strict" : false
-				},
-				{
-					"name" : "inst[23]",
+					"name" : "a[1]",
 					"strict" : false
 				}
 			]

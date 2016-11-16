@@ -4,6 +4,5 @@ module decoder(input logic  [23:0]inst, output logic [3:0]addr,output logic [7:0
 		 addr = inst[20:16];
 		 x = inst[15:8];
 		 y = inst[7:0];
-		 end
-		
+		 end		
 endmodule
