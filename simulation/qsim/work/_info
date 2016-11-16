@@ -8,14 +8,14 @@ z2
 !i10f 100
 cModel Technology
 Z0 d/home/andressa/Microeletronica/Nibble-VERILOG/simulation/qsim
-vdecoder
-Z1 !s110 1479306825
+vcomplement2
+Z1 !s110 1479320794
 !i10b 1
-!s100 l_N>i36Oaa=<KN7:mf`B`3
-I64mK3fW?EePDlZDRci[o43
+!s100 WTkWIVlS7@ClAd?[iFhF40
+I`VF]3mhg<IG?PZ>[AOHEc0
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1479306821
+w1479320793
 Z3 8nibble.vo
 Z4 Fnibble.vo
 Z5 L0 32
@@ -23,33 +23,73 @@ Z6 OV;L;10.4d;61
 r1
 !s85 0
 31
-!s108 1479306824.000000
-Z7 !s107 nibble.vo|
-Z8 !s90 -work|work|nibble.vo|
+Z7 !s108 1479320794.000000
+Z8 !s107 nibble.vo|
+Z9 !s90 -work|work|nibble.vo|
 !i113 1
-Z9 o-work work
-vdecoder_vlg_vec_tst
+Z10 o-work work
+vcomplement2_vlg_vec_tst
 R1
+!i10b 1
+!s100 kJ;>Gd7IMjmzOO2^l64Pz2
+I^?2KaIVVQbgN185[=F0[Y3
+R2
+R0
+w1479320792
+Z11 8Waveform.vwf.vt
+Z12 FWaveform.vwf.vt
+Z13 L0 30
+R6
+r1
+!s85 0
+31
+R7
+!s107 Waveform.vwf.vt|
+Z14 !s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R10
+vdecoder
+Z15 !s110 1479306825
+!i10b 1
+!s100 l_N>i36Oaa=<KN7:mf`B`3
+I64mK3fW?EePDlZDRci[o43
+R2
+R0
+w1479306821
+R3
+R4
+R5
+R6
+r1
+!s85 0
+31
+!s108 1479306824.000000
+R8
+R9
+!i113 1
+R10
+vdecoder_vlg_vec_tst
+R15
 !i10b 1
 !s100 Q7j25clZF@ZYNYlHXUE2O0
 I27RXb[IHbFORN`F<DD2S^3
 R2
 R0
 w1479306820
-Z10 8Waveform.vwf.vt
-Z11 FWaveform.vwf.vt
-Z12 L0 30
+R11
+R12
+R13
 R6
 r1
 !s85 0
 31
 !s108 1479306825.000000
 !s107 Waveform.vwf.vt|
-Z13 !s90 -work|work|Waveform.vwf.vt|
+R14
 !i113 1
-R9
+R10
 vsum1
-Z14 !s110 1479318613
+Z16 !s110 1479318613
 !i10b 1
 !s100 N@8HQJOP;X<Yn[BBLBj?:3
 IPiWzn4Z2_^6@i:0TknBS22
@@ -63,28 +103,28 @@ R6
 r1
 !s85 0
 31
-Z15 !s108 1479318613.000000
-R7
+Z17 !s108 1479318613.000000
 R8
-!i113 1
 R9
+!i113 1
+R10
 vsum1_vlg_vec_tst
-R14
+R16
 !i10b 1
 !s100 BZUZd@@`n0bJZ;l^R^lfd1
 I?l[f`7F@>3LM0_Sa@af1R1
 R2
 R0
 w1479318610
-R10
 R11
 R12
+R13
 R6
 r1
 !s85 0
 31
-R15
+R17
 !s107 Waveform.vwf.vt|
-R13
+R14
 !i113 1
-R9
+R10

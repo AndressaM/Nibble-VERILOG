@@ -1,5 +1,5 @@
 Analysis & Synthesis report for nibble
-Wed Nov 16 14:47:30 2016
+Wed Nov 16 15:26:09 2016
 Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
 
 
@@ -43,14 +43,14 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Nov 16 14:47:30 2016       ;
+; Analysis & Synthesis Status     ; Successful - Wed Nov 16 15:26:08 2016       ;
 ; Quartus Prime Version           ; 16.0.0 Build 211 04/27/2016 SJ Lite Edition ;
 ; Revision Name                   ; nibble                                      ;
-; Top-level Entity Name           ; sum1                                        ;
+; Top-level Entity Name           ; complement2                                 ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
 ; Total registers                 ; 0                                           ;
-; Total pins                      ; 11                                          ;
+; Total pins                      ; 25                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -69,7 +69,7 @@ agreement for further details.
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CGXFC7C7F23C8     ;                    ;
-; Top-level entity name                                                           ; sum1               ; nibble             ;
+; Top-level entity name                                                           ; complement2        ; nibble             ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                 ; On                 ;
@@ -162,40 +162,40 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                              ;
-+----------------------------------+-----------------+------------------------------+-------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                          ; Library ;
-+----------------------------------+-----------------+------------------------------+-------------------------------------------------------+---------+
-; sum1.sv                          ; yes             ; User SystemVerilog HDL File  ; /home/andressa/Microeletronica/Nibble-VERILOG/sum1.sv ;         ;
-+----------------------------------+-----------------+------------------------------+-------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                     ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                 ; Library ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------+---------+
+; complement2.sv                   ; yes             ; User SystemVerilog HDL File  ; /home/andressa/Microeletronica/Nibble-VERILOG/complement2.sv ;         ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------+---------+
 
 
-+----------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary              ;
-+---------------------------------------------+------------+
-; Resource                                    ; Usage      ;
-+---------------------------------------------+------------+
-; Estimate of Logic utilization (ALMs needed) ; 3          ;
-;                                             ;            ;
-; Combinational ALUT usage for logic          ; 5          ;
-;     -- 7 input functions                    ; 0          ;
-;     -- 6 input functions                    ; 0          ;
-;     -- 5 input functions                    ; 2          ;
-;     -- 4 input functions                    ; 1          ;
-;     -- <=3 input functions                  ; 2          ;
-;                                             ;            ;
-; Dedicated logic registers                   ; 0          ;
-;                                             ;            ;
-; I/O pins                                    ; 11         ;
-;                                             ;            ;
-; Total DSP Blocks                            ; 0          ;
-;                                             ;            ;
-; Maximum fan-out node                        ; a[0]~input ;
-; Maximum fan-out                             ; 6          ;
-; Total fan-out                               ; 36         ;
-; Average fan-out                             ; 1.33       ;
-+---------------------------------------------+------------+
++------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary          ;
++---------------------------------------------+--------+
+; Resource                                    ; Usage  ;
++---------------------------------------------+--------+
+; Estimate of Logic utilization (ALMs needed) ; 5      ;
+;                                             ;        ;
+; Combinational ALUT usage for logic          ; 9      ;
+;     -- 7 input functions                    ; 0      ;
+;     -- 6 input functions                    ; 0      ;
+;     -- 5 input functions                    ; 0      ;
+;     -- 4 input functions                    ; 0      ;
+;     -- <=3 input functions                  ; 9      ;
+;                                             ;        ;
+; Dedicated logic registers                   ; 0      ;
+;                                             ;        ;
+; I/O pins                                    ; 25     ;
+;                                             ;        ;
+; Total DSP Blocks                            ; 0      ;
+;                                             ;        ;
+; Maximum fan-out node                        ; Add0~1 ;
+; Maximum fan-out                             ; 2      ;
+; Total fan-out                               ; 51     ;
+; Average fan-out                             ; 0.86   ;
++---------------------------------------------+--------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -203,7 +203,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; |sum1                      ; 5 (5)             ; 0 (0)        ; 0                 ; 0          ; 11   ; 0            ; |sum1               ; sum1        ; work         ;
+; |complement2               ; 9 (9)             ; 0 (0)        ; 0                 ; 0          ; 25   ; 0            ; |complement2        ; complement2 ; work         ;
 +----------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -228,17 +228,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_lcell_comb     ; 6                           ;
-;     normal            ; 6                           ;
-;         1 data inputs ; 1                           ;
+; arriav_lcell_comb     ; 11                          ;
+;     arith             ; 7                           ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 5                           ;
 ;         2 data inputs ; 1                           ;
-;         3 data inputs ; 1                           ;
-;         4 data inputs ; 1                           ;
-;         5 data inputs ; 2                           ;
-; boundary_port         ; 11                          ;
+;     normal            ; 4                           ;
+;         1 data inputs ; 2                           ;
+;         2 data inputs ; 2                           ;
+; boundary_port         ; 25                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 1.00                        ;
-; Average LUT depth     ; 1.00                        ;
+; Max LUT depth         ; 3.60                        ;
+; Average LUT depth     ; 2.91                        ;
 +-----------------------+-----------------------------+
 
 
@@ -257,7 +258,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
-    Info: Processing started: Wed Nov 16 14:47:11 2016
+    Info: Processing started: Wed Nov 16 15:25:50 2016
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off nibble -c nibble
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file mux2.v
@@ -272,18 +273,29 @@ Info (12021): Found 1 design units, including 1 entities, in source file decoder
     Info (12023): Found entity 1: decoder File: /home/andressa/Microeletronica/Nibble-VERILOG/decoder.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file sum1.sv
     Info (12023): Found entity 1: sum1 File: /home/andressa/Microeletronica/Nibble-VERILOG/sum1.sv Line: 1
-Info (12127): Elaborating entity "sum1" for the top level hierarchy
+Info (12021): Found 1 design units, including 1 entities, in source file complement2.sv
+    Info (12023): Found entity 1: complement2 File: /home/andressa/Microeletronica/Nibble-VERILOG/complement2.sv Line: 1
+Info (12127): Elaborating entity "complement2" for the top level hierarchy
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 16 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 5 input pins
-    Info (21059): Implemented 6 output pins
-    Info (21061): Implemented 5 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 1287 megabytes
-    Info: Processing ended: Wed Nov 16 14:47:30 2016
+Warning (21074): Design contains 8 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "b[0]" File: /home/andressa/Microeletronica/Nibble-VERILOG/complement2.sv Line: 1
+    Warning (15610): No output dependent on input pin "b[1]" File: /home/andressa/Microeletronica/Nibble-VERILOG/complement2.sv Line: 1
+    Warning (15610): No output dependent on input pin "b[2]" File: /home/andressa/Microeletronica/Nibble-VERILOG/complement2.sv Line: 1
+    Warning (15610): No output dependent on input pin "b[3]" File: /home/andressa/Microeletronica/Nibble-VERILOG/complement2.sv Line: 1
+    Warning (15610): No output dependent on input pin "b[4]" File: /home/andressa/Microeletronica/Nibble-VERILOG/complement2.sv Line: 1
+    Warning (15610): No output dependent on input pin "b[5]" File: /home/andressa/Microeletronica/Nibble-VERILOG/complement2.sv Line: 1
+    Warning (15610): No output dependent on input pin "b[6]" File: /home/andressa/Microeletronica/Nibble-VERILOG/complement2.sv Line: 1
+    Warning (15610): No output dependent on input pin "b[7]" File: /home/andressa/Microeletronica/Nibble-VERILOG/complement2.sv Line: 1
+Info (21057): Implemented 34 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 16 input pins
+    Info (21059): Implemented 9 output pins
+    Info (21061): Implemented 9 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 10 warnings
+    Info: Peak virtual memory: 1284 megabytes
+    Info: Processing ended: Wed Nov 16 15:26:09 2016
     Info: Elapsed time: 00:00:19
-    Info: Total CPU time (on all processors): 00:00:44
+    Info: Total CPU time (on all processors): 00:00:41
 
 

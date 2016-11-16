@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Wed Nov 16 14:47:30 2016
+Analysis & Synthesis Status : Successful - Wed Nov 16 15:26:08 2016
 Quartus Prime Version : 16.0.0 Build 211 04/27/2016 SJ Lite Edition
 Revision Name : nibble
-Top-level Entity Name : sum1
+Top-level Entity Name : complement2
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
 Total registers : 0
-Total pins : 11
+Total pins : 25
 Total virtual pins : 0
 Total block memory bits : 0
 Total DSP Blocks : 0
