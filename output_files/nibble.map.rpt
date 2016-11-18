@@ -1,5 +1,5 @@
 Analysis & Synthesis report for nibble
-Wed Nov 16 20:40:44 2016
+Wed Nov 16 21:32:42 2016
 Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
 
 
@@ -43,7 +43,7 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Nov 16 20:40:44 2016       ;
+; Analysis & Synthesis Status     ; Successful - Wed Nov 16 21:32:42 2016       ;
 ; Quartus Prime Version           ; 16.0.0 Build 211 04/27/2016 SJ Lite Edition ;
 ; Revision Name                   ; nibble                                      ;
 ; Top-level Entity Name           ; reg_inst                                    ;
@@ -242,7 +242,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -252,7 +252,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
-    Info: Processing started: Wed Nov 16 20:40:20 2016
+    Info: Processing started: Wed Nov 16 21:32:21 2016
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off nibble -c nibble
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file mux2.v
@@ -281,6 +281,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file reg_op.
     Info (12023): Found entity 1: reg_op File: /home/andressa/Microeletronica/Nibble-VERILOG/reg_op.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file reg_inst.sv
     Info (12023): Found entity 1: reg_inst File: /home/andressa/Microeletronica/Nibble-VERILOG/reg_inst.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file reg_r.sv
+    Info (12023): Found entity 1: reg_r File: /home/andressa/Microeletronica/Nibble-VERILOG/reg_r.sv Line: 1
 Info (12127): Elaborating entity "reg_inst" for the top level hierarchy
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
@@ -291,8 +293,8 @@ Info (21057): Implemented 74 device resources after synthesis - the final resour
     Info (21061): Implemented 24 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 1284 megabytes
-    Info: Processing ended: Wed Nov 16 20:40:44 2016
-    Info: Elapsed time: 00:00:24
-    Info: Total CPU time (on all processors): 00:00:47
+    Info: Processing ended: Wed Nov 16 21:32:42 2016
+    Info: Elapsed time: 00:00:21
+    Info: Total CPU time (on all processors): 00:00:46
 
 
